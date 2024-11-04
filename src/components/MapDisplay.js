@@ -1,5 +1,3 @@
-// src/components/MapDisplay.js
-
 import React, { useEffect, useRef } from 'react';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
@@ -9,12 +7,11 @@ const MapDisplay = ({ latitude, longitude, onMapClick }) => {
 
   useEffect(() => {
     if (mapRef.current) {
-      mapRef.current.setView([latitude, longitude], mapRef.current.getZoom()); // Center the map to the new coordinates
+      mapRef.current.setView([latitude, longitude], mapRef.current.getZoom()); 
     }
-  }, [latitude, longitude]); // Effect runs whenever latitude or longitude changes
-
+  }, [latitude, longitude]); 
   const handleMapClick = (event) => {
-    onMapClick(event); // Call the onMapClick function passed as prop
+    onMapClick(event); 
   };
 
   return (
@@ -23,7 +20,7 @@ const MapDisplay = ({ latitude, longitude, onMapClick }) => {
       zoom={13}
       style={{ height: '400px', width: '100%' }}
       onClick={handleMapClick}
-      ref={mapRef} // Set ref to the MapContainer
+      ref={mapRef} 
     >
       <TileLayer
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
