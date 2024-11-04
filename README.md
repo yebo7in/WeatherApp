@@ -70,4 +70,5 @@ The project follows a typical React app organization. The main focus is on modul
 - **App.js**: The main component where state management and API calls are handled. It coordinates data fetching, state updates, and passes down props to child components.
 # What's left
 ## Bug
-There is a bug when user trying to toggle between C° and F°, in the console.log, it shows that user fetched twice the data which will cause the unit transform into a wrong result, I'm still working on it.
+- There is a bug when user trying to toggle between C° and F°, in the console.log, it shows that user fetched twice the data which will cause the unit transform into a wrong result, I'm still working on it.
+- I added effect into the background, but not working properly.
