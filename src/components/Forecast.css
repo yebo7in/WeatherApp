@@ -1,0 +1,24 @@
+/* src/components/Forecast.css */
+.forecast-container {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  .forecast-title {
+    margin-bottom: 15px;
+  }
+  
+  .forecast-items {
+    display: flex;
+    justify-content: space-around;
+    overflow-x: auto;
+  }
+  
+  .forecast-item {
+    flex: 1;
+    margin: 0 10px;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 5px;
+    text-align: center;
+  }
