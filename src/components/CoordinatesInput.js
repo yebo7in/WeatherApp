@@ -1,4 +1,4 @@
-// src/components/CoordinatesInput.js
+
 import React, { useState } from 'react';
 
 const CoordinatesInput = ({ fetchWeatherData }) => {
