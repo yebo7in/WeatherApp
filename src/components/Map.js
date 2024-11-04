@@ -1,27 +1,24 @@
-// src/components/Map.js
 import React, { useEffect } from 'react';
 import { MapContainer, TileLayer, Marker, Popup, useMap } from 'react-leaflet';
-import L from 'leaflet'; // Import Leaflet for marker icons
+import L from 'leaflet'; 
 
-// Fix the default marker icon issue
-delete L.Icon.Default.prototype._getIconUrl; // Remove default icon URL function
+delete L.Icon.Default.prototype._getIconUrl; 
 L.Icon.Default.mergeOptions({
-  iconRetinaUrl: require('leaflet/dist/images/marker-icon-2x.png'), // High-resolution icon URL
-  iconUrl: require('leaflet/dist/images/marker-icon.png'), // Regular icon URL
-  shadowUrl: require('leaflet/dist/images/marker-shadow.png'), // Shadow icon URL
+  iconRetinaUrl: require('leaflet/dist/images/marker-icon-2x.png'), 
+  iconUrl: require('leaflet/dist/images/marker-icon.png'), 
+  shadowUrl: require('leaflet/dist/images/marker-shadow.png'), 
 });
 
-// A component to update the map center
 const CenteredMap = ({ location }) => {
   const map = useMap();
 
   useEffect(() => {
     if (location.lat && location.lng) {
-      map.setView([location.lat, location.lng], 13); // Center the map on the new location
+      map.setView([location.lat, location.lng], 13); 
     }
   }, [location, map]);
 
-  return null; // This component does not render anything
+  return null;
 };
 
 const Map = ({ location }) => {
