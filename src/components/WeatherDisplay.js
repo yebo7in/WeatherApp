@@ -1,9 +1,9 @@
 import React from 'react';
 
 const WeatherDisplay = ({ data, unit }) => {
-  // Calculate temperature based on the unit
-  const temperatureC = data.main.temp; // Temperature in Celsius
-  const temperatureF = (temperatureC * 9 / 5) + 32; // Convert to Fahrenheit
+ 
+  const temperatureC = data.main.temp; 
+  const temperatureF = (temperatureC * 9 / 5) + 32; 
 
   return (
     <div>
