@@ -1,4 +1,3 @@
-// src/components/ErrorAlert.js
 import React from 'react';
 
 const ErrorAlert = ({ message }) => {
